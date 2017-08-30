@@ -10,3 +10,5 @@ require_once (ROOT.'/base/Model.php');
 require_once (ROOT.'/base/Controller.php');
 require_once (ROOT.'/base/View.php');
 require_once (ROOT.'/models/Users.php');
+require_once (ROOT.'/models/Cities.php');
+require_once (ROOT.'/models/reg.php');

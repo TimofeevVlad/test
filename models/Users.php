@@ -26,7 +26,7 @@ class Users extends Model
             $users->id = $row['id'];
             $users->name = $row['name'];
             $users->age = $row['age'];
-            $users->city = self::getCity($users->id);
+            $users->city = self::getCity($row['city_id']);
 
             $usersList[] = $users;
         }
@@ -43,5 +43,11 @@ class Users extends Model
 
         $userCity = $row['name'];
         return $userCity;
+    }
+
+    public static function createNewUser($_name, $_age, $_city_id)
+    {
+        self::setDbConnection();
+        Model::$dbConnection->query("INSERT INTO users (name, age, city_id) VALUES ('$_name','$_age','$_city_id')");
     }
 }

@@ -10,7 +10,7 @@ class UsersController extends Controller
     public function actionIndex()
     {
         $data = Users::getListUsers();
-
-        $this->view->generate($data);
+        $dataCities = Cities::getListCities();
+        $this->view->generate($data, $dataCities);
     }
 }

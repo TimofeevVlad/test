@@ -7,7 +7,7 @@
  */
 class View
 {
-    function generate($data = null)
+    function generate($data = null, $data2 = null)
     {
         include ROOT.'/views/UsersView.php';
     }
